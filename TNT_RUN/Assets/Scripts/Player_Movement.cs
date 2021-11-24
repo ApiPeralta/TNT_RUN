@@ -9,7 +9,7 @@ public class Player_Movement : MonoBehaviour
 {
     CharacterController characterController;
     [Header("Opciones de personaje")]
-    public float walkSpeed = 3.0f;
+    public static float walkSpeed = 3.0f;
     public static float jumpSpeed = 7.0f;
     public float gravity = 20.0f;
 
