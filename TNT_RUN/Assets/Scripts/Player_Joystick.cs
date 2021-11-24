@@ -10,7 +10,7 @@ public class Player_Joystick : MonoBehaviour
     CharacterController characterController;
     [Header("Opciones de personaje")]
     public float walkSpeed = 3.0f;
-    public static float jumpSpeed = 7.0f;
+    public static float jumpSpeed = 4.0f;
     public float gravity = 20.0f;
 
     [Header("Opciones de camara")]
@@ -57,10 +57,10 @@ public class Player_Joystick : MonoBehaviour
             else
                 move = transform.TransformDirection(move) * walkSpeed;
 
-            //if (Input.GetKeyDown(KeyCode.Space))
-            //{
-            //    move.y = jumpSpeed;
-            //}
+            if (Input.GetButton("Fire1"))
+            {
+                move.y = jumpSpeed;
+            }
         }
         move.y -= gravity * Time.deltaTime;
         characterController.Move(move * Time.deltaTime);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Barra_Inst : MonoBehaviour
 {
-    private float respawningTimer = 1;
+    private float respawningTimer = 15;
     public Rigidbody barra;
     public GameObject pos;
     public GameObject barraObj;
@@ -22,7 +22,7 @@ public class Barra_Inst : MonoBehaviour
         if (respawningTimer <= 0)
         {
             Instantiate(barraObj, pos.GetComponent<Transform>().position, Quaternion.identity);
-            respawningTimer = UnityEngine.Random.Range(10, 11);
+            respawningTimer = UnityEngine.Random.Range(14, 15);
         }
     }
 }

@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class JoystickBoosts : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform player2;
 
     // Update is called once per frame
     void Update()
@@ -26,6 +22,13 @@ public class JoystickBoosts : MonoBehaviour
         if (other.gameObject.CompareTag("Bomb"))
         {
             Bombs_Instantiator.cont = 1;
+        }
+        if (other.gameObject.CompareTag("Teleport"))
+        {
+            player2.GetComponent<CharacterController>().enabled = false;
+            player2.transform.position = new Vector3(Random.Range(-17, 7), 9, Random.Range(-1, 20));
+            player2.GetComponent<CharacterController>().enabled = true;
+            Destroy(other.gameObject);
         }
     }
 }
