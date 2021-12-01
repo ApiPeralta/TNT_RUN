@@ -7,16 +7,19 @@ public class Act_Desact : MonoBehaviour
     public static int valueCanon = 0;
     public static int valueBarrier = 0;
     public static int valueIce = 0;
+    public static int valuePosion = 0;
     public GameObject Canon;
     public GameObject Barrier;
     public GameObject Ice;
     public GameObject IceBarra;
+    public GameObject Posion;
     private void Start()
     {
         Canon.gameObject.SetActive(false);
         Barrier.gameObject.SetActive(false);
         Ice.gameObject.SetActive(false);
         IceBarra.gameObject.SetActive(false);
+        Posion.gameObject.SetActive(false);
     }
     void Update()
     {
@@ -32,6 +35,10 @@ public class Act_Desact : MonoBehaviour
         {
             Ice.gameObject.SetActive(true);
             IceBarra.gameObject.SetActive(true);
+        }
+        if (valuePosion == 1)
+        {
+            Posion.gameObject.SetActive(true);
         }
     }
 }
