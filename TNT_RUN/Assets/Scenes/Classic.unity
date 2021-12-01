@@ -13364,6 +13364,7 @@ GameObject:
   - component: {fileID: 326681712}
   - component: {fileID: 326681714}
   - component: {fileID: 326681716}
+  - component: {fileID: 326681715}
   m_Layer: 0
   m_Name: ScriptsManager
   m_TagString: Untagged
@@ -13441,6 +13442,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bomb: {fileID: 9013487955520519, guid: 9ea278f2f1e31b74981bedd137b958d9, type: 3}
+--- !u!114 &326681715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326681709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be1f8d5cbeb4613468239331537033f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &326681716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62421,7 +62434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bocaCanion: {fileID: 1505753920}
-  bala: {fileID: 688531099514792992, guid: c3b9c63a56e381a4a895f6a4faebab3a, type: 3}
+  bala: {fileID: 95771971986300468, guid: 9c73791040c581e43abff7b073e01b66, type: 3}
   Player_RB: {fileID: 30399279}
   player: {fileID: 30399286}
   respawningTimer: 0
