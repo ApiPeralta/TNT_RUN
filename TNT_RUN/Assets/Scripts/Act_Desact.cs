@@ -10,11 +10,13 @@ public class Act_Desact : MonoBehaviour
     public GameObject Canon;
     public GameObject Barrier;
     public GameObject Ice;
+    public GameObject IceBarra;
     private void Start()
     {
         Canon.gameObject.SetActive(false);
         Barrier.gameObject.SetActive(false);
         Ice.gameObject.SetActive(false);
+        IceBarra.gameObject.SetActive(false);
     }
     void Update()
     {
@@ -29,6 +31,7 @@ public class Act_Desact : MonoBehaviour
         if (valueIce == 1)
         {
             Ice.gameObject.SetActive(true);
+            IceBarra.gameObject.SetActive(true);
         }
     }
 }

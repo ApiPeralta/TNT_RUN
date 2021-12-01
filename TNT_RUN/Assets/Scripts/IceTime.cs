@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class IceTime : MonoBehaviour
 {
-    public static float timer = 0;
     public Rigidbody Player_Teclado_RB;
     public Rigidbody Player_Joystick_RB;
 
@@ -23,8 +22,7 @@ public class IceTime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        if(timer >= 4)
+        if(_Slider.timerr <= 0)
         {
             StartCoroutine(Frezze());
         }
@@ -49,7 +47,7 @@ public class IceTime : MonoBehaviour
         Player_Teclado_CC.enabled = true;
         Player_Joystick_CC.enabled = true;
 
-        timer = 0;
+        _Slider.timerr = 25;
     }
 
 }
