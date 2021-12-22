@@ -9,6 +9,7 @@ public class Menu : MonoBehaviour
     private void Start()
     {
         //m_Toggle = GetComponent<Toggle>();
+        Cursor.lockState = CursorLockMode.None;
     }
     public void Classic()
     {
