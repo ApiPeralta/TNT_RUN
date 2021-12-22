@@ -47,7 +47,10 @@ public class Player_Movement : MonoBehaviour
 
         transform.Rotate(0, h_mouse, 0);
 
-
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(0);
+        }
         if (characterController.isGrounded)
         {
             move = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
